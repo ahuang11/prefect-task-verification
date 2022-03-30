@@ -1,5 +1,5 @@
 """
-Verifies the core functionality of Google Cloud Platform Secret Manager.
+Verifies the core functionality of Transform materialization task.
 """
 
 from prefect import Flow, task
