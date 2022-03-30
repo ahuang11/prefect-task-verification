@@ -7,6 +7,8 @@ import os
 from prefect import Flow, task
 from prefect.tasks.database.sqlite import SQLiteQuery, SQLiteScript
 
+DB = "prefect.db"
+
 
 @task
 def _show_output(std_out):
@@ -15,8 +17,6 @@ def _show_output(std_out):
     """
     print(std_out)
 
-
-DB = "prefect.db"
 
 with Flow("sqlite") as flow:
     script = """
